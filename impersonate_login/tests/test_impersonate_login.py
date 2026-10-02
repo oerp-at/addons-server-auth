@@ -352,7 +352,7 @@ class TestImpersonateLogin(HttpCase):
         config_restrict = (
             self.env["ir.config_parameter"]
             .sudo()
-            .get_param("impersonate_login.restrict_impersonate_admin_settings")
+            .get_bool("impersonate_login.restrict_impersonate_admin_settings")
         )
         self.assertTrue(config_restrict)
 
